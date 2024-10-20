@@ -1,0 +1,52 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><html >
+<head>
+    <title>Unit Converter</title>
+    <script>
+        function con() {
+            var a = document.getElementById("aaa").value;
+            var s = document.getElementById("selected").value;
+            var p;
+
+            if (s === "u1")
+             {
+                p = a / 100; 
+            } 
+            else if (s === "u2") {
+                p = a / 1000;
+            } else if (s === "u3") {
+                p = a / 1000; 
+            }
+
+            document.getElementById("val").value = p; // Set the output value
+        }
+    </script>
+</head>
+<body>
+    <h2 align="center">Unit Converter</h2>
+    <br>
+    <center>
+        <img src="engii.jpg" height="180" width="200" alt="Converter Image">
+        <table border="2">
+            <tr>
+                <th>
+                    <form name="conversion">
+                        Select the converter:
+                        <select name="unit" id="selected">
+                            <option value="u1">Centimeter to Meter</option>
+                            <option value="u2">Meter to Kilometer</option>
+                            <option value="u3">Gram to Kilogram</option>
+                        </select>
+                        <br><br>
+                        Enter the value: <input type="text" id="aaa"><br><br>
+                        <input type="button" value="Convert" onClick="con()">
+                        <input type="reset" value="Reset">
+                    </form>
+                </th>
+            </tr>
+        </table>
+        <input type="text" id="val">
+    </center>
+    <marquee>* This webpage is developed by Arjun S3 CT *</marquee>
+    <a href="https://testbook.com/objective-questions/mcq-on-unit-conversion--621f7d5cded23d13be905391">Thanks for the equations</a>
+</body>
+</html>
